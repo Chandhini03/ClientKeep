@@ -30,8 +30,7 @@ export default function Login() {
           alert(data.msg);
           return;
         }
-
-        // ✅ Login success
+        localStorage.setItem("token",data.token);
         navigate("/dashboard");
       })
       .catch(() => {
